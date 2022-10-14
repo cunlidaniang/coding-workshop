@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.txt": "bat",
+        "iostream": "cpp",
+        "random": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}

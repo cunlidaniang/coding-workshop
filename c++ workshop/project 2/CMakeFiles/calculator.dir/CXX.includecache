@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/BigNumFunctions.cpp
+BigNum.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/BigNum.hpp
+
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/main.cpp
+head.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/head.hpp
+BigNum.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/BigNum.hpp
+stringFunctions.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/stringFunctions.hpp
+BigNumFunctions.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/BigNumFunctions.hpp
+
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/stringFunctions.cpp
+head.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/head.hpp
+BigNum.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/BigNum.hpp
+
+include/BigNum.hpp
+head.hpp
+include/head.hpp
+stringFunctions.hpp
+include/stringFunctions.hpp
+
+include/BigNumFunctions.hpp
+BigNum.hpp
+include/BigNum.hpp
+
+include/head.hpp
+iostream
+-
+string
+-
+
+include/stringFunctions.hpp
+
