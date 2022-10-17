@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/calculator.dir/src/BigNumFunctions.o"
+  "CMakeFiles/calculator.dir/src/helps.o"
   "CMakeFiles/calculator.dir/src/main.o"
   "CMakeFiles/calculator.dir/src/stringFunctions.o"
   "calculator"

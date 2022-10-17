@@ -59,8 +59,11 @@ bool isIntNum(string s){//return true IFF string is in '-123'-like Integer forma
 	return isPureNum(s);
 }
 
-bool isvalid(string s){  //check if s is valid
+bool isvalid(string s){  //check if s is valid BigNumInput string
 	int len= s.length();
+	if(len == 0){  //like ""
+		return false;
+	}
 	int eNum= 0;
 	int ePos= -1;
 	For(i, 0, len- 1){
@@ -78,4 +81,49 @@ bool isvalid(string s){  //check if s is valid
 	}else{
 		return isNum(s.substr(0, ePos) )&& isIntNum(s.substr(ePos+ 1, len- ePos- 1) );
 	}
+}
+
+string removePreSufSpace(string s){  //return the s' which remove the previous and suffix space from s ; like "  A  " into "A"
+    int len = s.length();
+    if(len == 0){
+        return "";
+    }
+    int l = 0 , r = len - 1;
+    while(s.at(l) == ' '){
+    	if(l >= len - 1){
+    		break;
+		}
+        l++;
+    }
+    while(s.at(r) == ' '){
+    	if(r <= 0){
+    		break;
+		}
+        r--;
+    }
+    if(r < l){
+        return "";
+    }
+    return s.substr(l , r - l + 1);
+}
+
+bool isValidVariable(string s){ //return true IIF string is in proper variable form like "ead123" or "_ears123" instead of "123es"
+	int len = s.length();
+	For(i, 0, len - 1){
+		char c = s.at(i);
+		if(i == 0){
+			if(c == '_' || ('a'<= c && c<= 'z') || ('A'<= c && c<= 'Z')){
+				continue;
+			}else{
+				return false;
+			}
+		}else{
+			if(c == '_' || ('a'<= c && c<= 'z') || ('A'<= c && c<= 'Z') || ('0'<= c && c<= '9')){
+				continue;
+			}else{
+				return false;
+			}
+		}
+	}
+	return true;
 }

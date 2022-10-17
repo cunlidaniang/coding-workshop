@@ -6,11 +6,16 @@ CMakeFiles/calculator.dir/src/BigNumFunctions.o
  include/BigNum.hpp
  include/head.hpp
  include/stringFunctions.hpp
+CMakeFiles/calculator.dir/src/helps.o
+ /mnt/d/workshops/coding workshop/c++ workshop/project 2/src/helps.cpp
+ include/head.hpp
 CMakeFiles/calculator.dir/src/main.o
  /mnt/d/workshops/coding workshop/c++ workshop/project 2/src/main.cpp
  include/BigNum.hpp
  include/BigNumFunctions.hpp
+ include/calculateExpertSystem.hpp
  include/head.hpp
+ include/helps.hpp
  include/stringFunctions.hpp
 CMakeFiles/calculator.dir/src/stringFunctions.o
  /mnt/d/workshops/coding workshop/c++ workshop/project 2/src/stringFunctions.cpp

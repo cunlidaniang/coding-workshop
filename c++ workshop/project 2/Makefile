@@ -139,6 +139,21 @@ src/BigNumFunctions.s:
 .PHONY : src/BigNumFunctions.s
 
 # target to build an object file
+src/helps.o:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/helps.o
+.PHONY : src/helps.o
+
+# target to preprocess a source file
+src/helps.i:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/helps.i
+.PHONY : src/helps.i
+
+# target to generate assembly for a file
+src/helps.s:
+	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/helps.s
+.PHONY : src/helps.s
+
+# target to build an object file
 src/main.o:
 	$(MAKE) -f CMakeFiles/calculator.dir/build.make CMakeFiles/calculator.dir/src/main.o
 .PHONY : src/main.o
@@ -180,6 +195,9 @@ help:
 	@echo "... src/BigNumFunctions.o"
 	@echo "... src/BigNumFunctions.i"
 	@echo "... src/BigNumFunctions.s"
+	@echo "... src/helps.o"
+	@echo "... src/helps.i"
+	@echo "... src/helps.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

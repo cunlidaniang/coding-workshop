@@ -3,12 +3,21 @@
 
 #include "head.hpp"
 #include "stringFunctions.hpp"
+#include <cmath>
 
 struct BigNum{    //a struct to store big num
 	int size;     //size of a[N]
 	bool pos;     //if the value is positive
 	int a[N];     //store value bit by bit like 0 1 2 3 equal to 3210 ; index from 0
 	ll e;         //store the number of e
+
+	BigNum(){          //constructor 1  intialize BigNum defaultly with 0
+		this->read("0");
+	}
+
+	BigNum(string s){   //constructor 2 ; intialize BigNum with string s (input must be valid)
+		this->read(s);
+	}
 
 	BigNum operator / (BigNum o){//define / operation
 		BigNum zero;              //justify the o not zero
@@ -150,6 +159,16 @@ struct BigNum{    //a struct to store big num
 		return ans;
 	}
 
+	ll toLongLong(){ //change into LongLong
+		ll ans = 0;
+		Ford(i, size - 1, 0){
+			ans *= 10;
+			ans += a[i];
+		}
+		ans = ans * pow(10 , e);
+		return ans;
+	}
+
 	void sqrt(){//define sqrt operation
 		if(this-> pos == false){
 			printf("Warning! sqrt(negative number)!!\n");
@@ -159,7 +178,7 @@ struct BigNum{    //a struct to store big num
 		}
 
 		BigNum l , r;
-
+		BigNum mid;
 		// pos
 		l.pos = r.pos = true;
 		// e
@@ -173,23 +192,21 @@ struct BigNum{    //a struct to store big num
 		r.a[0] = 9;
 
 		//divsion search
-		BigNum p;             //precision
+		BigNum * pp = new BigNum;
+		BigNum p = *pp;          //precision
 		p.pos = true;
 		p.e = SqrtPrecision;
 		p.size = 1;
 		p.a[0] = 1;
-
-		BigNum doubleDivid;
-		doubleDivid.read("5e-1");
+		BigNum doubleDivid = BigNum("5e-1");
 		while((r - l) > p){
-			BigNum mid = (l + r) * doubleDivid;
+			mid = (l + r) * doubleDivid;
 			if((mid * mid).absCompare(this) ){
 				r = mid;
 			}else{
 				l = mid;
 			}
 		}
-
 		*this = l;
 	}
 

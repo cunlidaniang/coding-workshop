@@ -6,10 +6,15 @@ CMakeFiles/calculator.dir/src/BigNumFunctions.o: include/BigNum.hpp
 CMakeFiles/calculator.dir/src/BigNumFunctions.o: include/head.hpp
 CMakeFiles/calculator.dir/src/BigNumFunctions.o: include/stringFunctions.hpp
 
+CMakeFiles/calculator.dir/src/helps.o: src/helps.cpp
+CMakeFiles/calculator.dir/src/helps.o: include/head.hpp
+
 CMakeFiles/calculator.dir/src/main.o: src/main.cpp
 CMakeFiles/calculator.dir/src/main.o: include/BigNum.hpp
 CMakeFiles/calculator.dir/src/main.o: include/BigNumFunctions.hpp
+CMakeFiles/calculator.dir/src/main.o: include/calculateExpertSystem.hpp
 CMakeFiles/calculator.dir/src/main.o: include/head.hpp
+CMakeFiles/calculator.dir/src/main.o: include/helps.hpp
 CMakeFiles/calculator.dir/src/main.o: include/stringFunctions.hpp
 
 CMakeFiles/calculator.dir/src/stringFunctions.o: src/stringFunctions.cpp

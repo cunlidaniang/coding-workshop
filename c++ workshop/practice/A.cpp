@@ -1,6 +1,15 @@
 #include<iostream>
-#include<cmath>
-
+#include<string>
+#include<map>
+using namespace std;
+typedef long long ll;
+#define ri register int
+#define For(i, a, b) for(ri i= a;i<= b;i++)
+#define Ford(i, a, b) for(ri i= a;i>= b;i--)
+#define N 100000      //maximum size of BigNum a[N]
+#define DivisionPrecision -4  //the precison of '/' operation
+#define SqrtPrecision -4  //the precison of sqrt operation
+#define ApproximationPrecision -1 //approximationPrecision
 using namespace std;
 
 typedef int myint;
@@ -13,22 +22,30 @@ typedef struct _rgb_struct{//name _rgb_struct can be omit
     unsigned char b;
 } rgb_struct;
 
-
-int ff(int i){
-	if (i== 0){
-		return 1;
+bool isValidVariable(string s){ //return true IIF string is in proper variable form like "ead123" or "_ears123" instead of "123es"
+	int len = s.length();
+	For(i, 0, len - 1){
+		char c = s.at(i);
+		if(i == 0){
+			if(c == '_' || ('a'<= c && c<= 'z') || ('A'<= c && c<= 'Z')){
+				continue;
+			}else{
+				return false;
+			}
+		}else{
+			if(c == '_' || ('a'<= c && c<= 'z') || ('A'<= c && c<= 'Z') || ('0'<= c && c<= '9')){
+				continue;
+			}else{
+				return false;
+			}
+		}
 	}
-	return i* ff(i- 1);
+	return true;
 }
 
 int main(){
-	double ans= 0;
-	for(int i= 0;i<= 5;i++){
-		ans+= (double)pow(5, i) * (double)exp(-5)/ (double)(ff(i));
-	}
-	
-	cout<< ans<< endl;
-	cout<< pow(5, 3)<< endl;
+	string s = "ABC";
+	cout<< "!!" << s.substr(3, 2)<< "!!" << endl;
 }
 
 

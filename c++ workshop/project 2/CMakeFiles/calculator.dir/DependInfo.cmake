@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/BigNumFunctions.cpp" "/mnt/d/workshops/coding workshop/c++ workshop/project 2/CMakeFiles/calculator.dir/src/BigNumFunctions.o"
+  "/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/helps.cpp" "/mnt/d/workshops/coding workshop/c++ workshop/project 2/CMakeFiles/calculator.dir/src/helps.o"
   "/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/main.cpp" "/mnt/d/workshops/coding workshop/c++ workshop/project 2/CMakeFiles/calculator.dir/src/main.o"
   "/mnt/d/workshops/coding workshop/c++ workshop/project 2/src/stringFunctions.cpp" "/mnt/d/workshops/coding workshop/c++ workshop/project 2/CMakeFiles/calculator.dir/src/stringFunctions.o"
   )
