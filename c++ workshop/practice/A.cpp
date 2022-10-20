@@ -1,51 +1,100 @@
 #include<iostream>
-#include<string>
-#include<map>
+#include<queue>
 using namespace std;
 typedef long long ll;
+typedef pair<int, int > pii;
 #define ri register int
-#define For(i, a, b) for(ri i= a;i<= b;i++)
-#define Ford(i, a, b) for(ri i= a;i>= b;i--)
-#define N 100000      //maximum size of BigNum a[N]
-#define DivisionPrecision -4  //the precison of '/' operation
-#define SqrtPrecision -4  //the precison of sqrt operation
-#define ApproximationPrecision -1 //approximationPrecision
-using namespace std;
+#define rc register char
+#define rd register double
+#define For(i, a, b) for(ri i= (a);i<= (b);i++)
+#define Ford(i, a, b) for(ri i= (a);i>= (b);i--)
+#define Max(a, b) ((a)> (b)? (a): (b))
+#define Min(a, b) ((a)< (b)? (a): (b))
+#define rll register long long
+#define MOD 514329
+#define M_PI 3.14159265358979323846
 
-typedef int myint;
+ll abs(rll x){
+	return x> 0? x: -x;
+}
 
-typedef unsigned char vec3b[3];
-
-typedef struct _rgb_struct{//name _rgb_struct can be omit
-    unsigned char r;
-    unsigned char g;
-    unsigned char b;
-} rgb_struct;
-
-bool isValidVariable(string s){ //return true IIF string is in proper variable form like "ead123" or "_ears123" instead of "123es"
-	int len = s.length();
-	For(i, 0, len - 1){
-		char c = s.at(i);
-		if(i == 0){
-			if(c == '_' || ('a'<= c && c<= 'z') || ('A'<= c && c<= 'Z')){
-				continue;
-			}else{
-				return false;
-			}
-		}else{
-			if(c == '_' || ('a'<= c && c<= 'z') || ('A'<= c && c<= 'Z') || ('0'<= c && c<= '9')){
-				continue;
-			}else{
-				return false;
-			}
-		}
+ll read(){
+	ll n= 0, b= 1;
+	char c= getchar();
+	while(!isdigit(c) ){
+		if(c== '-') b= -1;
+		c= getchar();
 	}
-	return true;
+	while(isdigit(c) ){
+		n= n* 10;
+		n+= c- 48;
+		c= getchar();
+	}
+	return n* b;
 }
 
-int main(){
-	string s = "ABC";
-	cout<< "!!" << s.substr(3, 2)<< "!!" << endl;
+void qSort(int a[], int l, int r){
+	int mid= a[(l+ r)>> 1];
+	int i= l, j= r;
+	do{
+		while(a[i] < mid){
+			i++;
+		}
+		while(a[j] > mid){
+			j--;
+		}
+		if(i<= j){
+			int tmp= a[i];
+			a[i]= a[j];
+			a[j]= tmp;
+			i++;
+			j--;
+		}
+	}while(i<= j);
+	if(l< j){
+		qSort(a, l, j);
+	}
+	if(r> i){
+		qSort(a, i, r);
+	}
 }
 
 
+const int N= 1e5;
+
+struct Node{
+	bool type;  //0:val 1:(
+	int val;
+	Node(){
+		type = 1;
+	}
+	Node(int x){
+		type = 0;
+		this-> val = x % MOD;
+	}
+};
+
+Node sta[N+ 5];
+int size = 0;
+
+int main()
+{
+	int * p = new int;
+	*p = 123;
+	cout<< p << endl;
+	cout<< *p << endl;
+	delete p;
+	cout<< p << endl;
+	cout<< *p << endl;
+
+    return 0;
+}
+
+/*
+
+5
+1 3 4 3 6
+2
+1 20
+
+*/
