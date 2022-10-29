@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.txt": "bat",
+        "matrix.h": "c",
+        "head.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "stdbool.h": "c",
+        "limits": "c",
+        "*.tcc": "c"
+    }
+}

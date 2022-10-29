@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/workshops/coding workshop/c++ workshop/project 3/src/Matrix.c
+head.h
+/mnt/d/workshops/coding workshop/c++ workshop/project 3/src/head.h
+Matrix.h
+/mnt/d/workshops/coding workshop/c++ workshop/project 3/src/Matrix.h
+
+/mnt/d/workshops/coding workshop/c++ workshop/project 3/src/main.c
+head.h
+/mnt/d/workshops/coding workshop/c++ workshop/project 3/src/head.h
+Matrix.h
+/mnt/d/workshops/coding workshop/c++ workshop/project 3/src/Matrix.h
+
+include/Matrix.h
+
+include/head.h
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+
