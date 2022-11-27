@@ -93,7 +93,6 @@ Matrix * matmul_improved(const Matrix * const pA, const Matrix * const pB){
             _mm256_store_ps(pC->entry + i * col1 + j , c);
         }
         if(j != col2){
-            printf("!");
             float * tmp = (float *) aligned_alloc(32, 8 * sizeof(float));
             memset(tmp , 0 , sizeof(tmp) );
             __m256 c = _mm256_load_ps(tmp);
