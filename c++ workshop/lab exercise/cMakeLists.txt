@@ -1,0 +1,8 @@
+
+set(CMAKE_CXX_STANDARD 11)
+
+project(aaa)
+
+ADD_EXECUTABLE(aaa main.cpp)
+
+

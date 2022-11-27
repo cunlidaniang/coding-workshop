@@ -1,5 +1,5 @@
 #include<iostream>
-#include<queue>
+#include<cstring>
 using namespace std;
 typedef long long ll;
 typedef pair<int, int > pii;
@@ -12,7 +12,10 @@ typedef pair<int, int > pii;
 #define Min(a, b) ((a)< (b)? (a): (b))
 #define abs(x) ((x) > 0 ? (x) : (-x) )
 #define rll register long long
-#define Mod 998244353
+#define Mod1 1000000007
+#define Mod2 998244353
+#define Redix1 31
+#define Redix2 37
 #define M_PI 3.14159265358979323846
 
 ll read(){

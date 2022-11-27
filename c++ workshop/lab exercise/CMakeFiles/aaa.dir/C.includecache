@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/main.c
+stdio.h
+-
+stdlib.h
+-
+immintrin.h
+-
+

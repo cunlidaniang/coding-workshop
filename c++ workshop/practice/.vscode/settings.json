@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "*.txt": "bat",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "queue": "cpp",
+        "string": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp"
     }
 }

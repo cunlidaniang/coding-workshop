@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.txt": "bat",
+        "head.h": "c",
+        "string.h": "c"
+    }
+}
