@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/main.dir/src/Matrix.c.o CMakeFiles/main.dir/src/main.c.o  -o main  /usr/local/OpenBLAS.OpenMP/lib/libopenblas.a /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so 

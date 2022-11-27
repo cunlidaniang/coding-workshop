@@ -109,14 +109,16 @@ Matrix * matmul_improved(const Matrix * const pA, const Matrix * const pB){
     return pC;
 }
 
-//block multiplication C += A * B guranted that bock size is 8
-inline void do_block(float * C, float * A, float * B, size_t row1, size_t col1, size_t row2, size_t col2, size_t si, size_t sj, size_t sk){
-    for(size_t i = si;i < si + BLOCKSIZE_ROW;i++){
-        __m256 c = _mm256_load_ps(C + i * col1 + sj);
-        for(size_t k = sk;k < sk + BOLCKSIZE_TOG;k++){
-            c = _mm256_add_ps(c , _mm256_mul_ps(_mm256_broadcast_ss(A + i * col1 + k), _mm256_load_ps(B + k * col2 + sj) ) );
+//block multiplication C += A * B guranted that size of A and B is block_size
+inline void do_block(float * C, float * A, float * B, size_t row1, size_t col1, size_t row2, size_t col2, size_t si, size_t sj, size_t sk, size_t block_size){
+    for(size_t i = si;i < si + block_size;i++){
+        for(size_t j = sj;j < sj + block_size;j += 8){
+            __m256 c = _mm256_load_ps(C + i * col1 + j);
+            for(size_t k = sk;k < sk + block_size;k++){
+                c = _mm256_add_ps(c , _mm256_mul_ps(_mm256_broadcast_ss(A + i * col1 + k), _mm256_load_ps(B + k * col2 + j) ) );
+            }
+            _mm256_store_ps(C + i * col1 + j , c);
         }
-        _mm256_store_ps(C + i * col1 + sj , c);
     }
 }
 //multiply two Matrix A and B in an advanced way using SIMD and openMP and Blocking.
@@ -135,11 +137,12 @@ Matrix * matmul_improved_Final(const Matrix * const pA, const Matrix * const pB)
     pC->row = row1;
     pC->col = col2;
     pC->entry = (float *) aligned_alloc(32 , sizeof(float) * row1 * col2);
+    size_t block_size = 64;
     #pragma omp parallel for
-    for(size_t i = 0;i < row1;i += BLOCKSIZE_ROW){
-        for(size_t j = 0;j < col2;j += BOLCKSIZE_COL){
-            for(size_t k = 0;k < col1;k += BOLCKSIZE_TOG){
-                do_block(pC->entry, pA->entry, pB->entry, row1, col1, row2, col2, i, j, k);
+    for(size_t i = 0;i < row1;i += block_size){
+        for(size_t j = 0;j < col2;j += block_size){
+            for(size_t k = 0;k < col1;k += block_size){
+                do_block(pC->entry, pA->entry, pB->entry, row1, col1, row2, col2, i, j, k, block_size);
             }
         }
     }

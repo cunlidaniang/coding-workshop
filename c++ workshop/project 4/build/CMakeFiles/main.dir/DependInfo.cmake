@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/CMakeFiles/main.dir/src/Matrix.c.o"
-  "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/CMakeFiles/main.dir/src/main.c.o"
+  "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build/CMakeFiles/main.dir/src/Matrix.c.o"
+  "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build/CMakeFiles/main.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "include"
+  "../include"
   "/usr/local/OpenBLAS.OpenMP/lib/include"
   )
 

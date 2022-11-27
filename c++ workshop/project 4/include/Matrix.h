@@ -17,8 +17,8 @@ void print_matrix(const Matrix * const pMatrix);
 Matrix * matmul_plain(const Matrix * const pA, const Matrix * const pB);
 //multiply two Matrix A and B in an advanced way using SIMD and openMP.
 Matrix * matmul_improved(const Matrix * const pA, const Matrix * const pB);
-//block multiplication C += A * B
-void do_block(float * C, float * A, float * B, size_t row1, size_t col1, size_t row2, size_t col2, size_t si, size_t sj, size_t sk);
+//block multiplication C += A * B guranted that size of A and B is block_size
+void do_block(float * C, float * A, float * B, size_t row1, size_t col1, size_t row2, size_t col2, size_t si, size_t sj, size_t sk, size_t block_size);
 //multiply two Matrix A and B in an advanced way using SIMD and openMP and Blocking.
 Matrix * matmul_improved_Final(const Matrix * const pA, const Matrix * const pB);
 

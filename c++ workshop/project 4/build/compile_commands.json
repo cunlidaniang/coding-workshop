@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build",
+  "command": "/usr/bin/gcc  -I\"/mnt/d/workshops/coding workshop/c++ workshop/project 4/include\" -I/usr/local/OpenBLAS.OpenMP/lib/include  -g   -O3 -march=native -fopenmp -o CMakeFiles/main.dir/src/Matrix.c.o   -c \"/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c\"",
+  "file": "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c"
+},
+{
+  "directory": "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build",
+  "command": "/usr/bin/gcc  -I\"/mnt/d/workshops/coding workshop/c++ workshop/project 4/include\" -I/usr/local/OpenBLAS.OpenMP/lib/include  -g   -O3 -march=native -fopenmp -o CMakeFiles/main.dir/src/main.c.o   -c \"/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c\"",
+  "file": "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c"
+}
+]

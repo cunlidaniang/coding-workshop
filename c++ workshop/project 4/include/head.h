@@ -10,13 +10,9 @@
 #include <sys/time.h>
 #include <immintrin.h>
 #include <omp.h>
+#include <cblas.h>
 typedef long long ll;
 typedef unsigned long long ull;
-#define BLOCKSIZE_ROW 8
-#define BOLCKSIZE_COL 8
-#define BOLCKSIZE_TOG 8
-
-#define For(i, a, b) for(int i = (a);i <= (b);i++)
-#define Ford(i, a, b) for(int i = (a);i >= (b);i--)
+#define BLOCKSIZE 16
 
 #endif

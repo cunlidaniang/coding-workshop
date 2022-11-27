@@ -46,7 +46,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/mnt/d/workshops/coding workshop/c++ workshop/project 4"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/d/workshops/coding workshop/c++ workshop/project 4"
+CMAKE_BINARY_DIR = "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -58,30 +58,30 @@ include CMakeFiles/main.dir/progress.make
 include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/src/Matrix.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Matrix.c.o: src/Matrix.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/workshops/coding workshop/c++ workshop/project 4/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/Matrix.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/Matrix.c.o   -c "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c"
+CMakeFiles/main.dir/src/Matrix.c.o: ../src/Matrix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/workshops/coding workshop/c++ workshop/project 4/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/Matrix.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/Matrix.c.o   -c "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c"
 
 CMakeFiles/main.dir/src/Matrix.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/Matrix.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c" > CMakeFiles/main.dir/src/Matrix.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c" > CMakeFiles/main.dir/src/Matrix.c.i
 
 CMakeFiles/main.dir/src/Matrix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/Matrix.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c" -o CMakeFiles/main.dir/src/Matrix.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/Matrix.c" -o CMakeFiles/main.dir/src/Matrix.c.s
 
 CMakeFiles/main.dir/src/main.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/main.c.o: src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/workshops/coding workshop/c++ workshop/project 4/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c"
+CMakeFiles/main.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/d/workshops/coding workshop/c++ workshop/project 4/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/main.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c"
 
 CMakeFiles/main.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c" > CMakeFiles/main.dir/src/main.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c" > CMakeFiles/main.dir/src/main.c.i
 
 CMakeFiles/main.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c" -o CMakeFiles/main.dir/src/main.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/d/workshops/coding workshop/c++ workshop/project 4/src/main.c" -o CMakeFiles/main.dir/src/main.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -98,7 +98,7 @@ main: /usr/local/OpenBLAS.OpenMP/lib/libopenblas.a
 main: /usr/lib/gcc/x86_64-linux-gnu/9/libgomp.so
 main: /usr/lib/x86_64-linux-gnu/libpthread.so
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/d/workshops/coding workshop/c++ workshop/project 4/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/d/workshops/coding workshop/c++ workshop/project 4/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +111,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd "/mnt/d/workshops/coding workshop/c++ workshop/project 4" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/d/workshops/coding workshop/c++ workshop/project 4" "/mnt/d/workshops/coding workshop/c++ workshop/project 4" "/mnt/d/workshops/coding workshop/c++ workshop/project 4" "/mnt/d/workshops/coding workshop/c++ workshop/project 4" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/CMakeFiles/main.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/d/workshops/coding workshop/c++ workshop/project 4" "/mnt/d/workshops/coding workshop/c++ workshop/project 4" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build" "/mnt/d/workshops/coding workshop/c++ workshop/project 4/build/CMakeFiles/main.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 
