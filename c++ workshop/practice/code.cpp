@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cstring>
+#include<algorithm>
 using namespace std;
 typedef long long ll;
 typedef pair<int, int > pii;
@@ -17,101 +18,149 @@ typedef pair<int, int > pii;
 #define Redix1 31
 #define Redix2 37
 #define M_PI 3.14159265358979323846
- 
+
 ll read(){
-    ll n= 0, b= 1;
-    char c= getchar();
-    while(!isdigit(c) ){
-        if(c== '-') b= -1;
-        c= getchar();
-    }
-    while(isdigit(c) ){
-        n= n* 10;
-        n+= c- 48;
-        c= getchar();
-    }
-    return n* b;
+	ll n= 0, b= 1;
+	char c= getchar();
+	while(!isdigit(c) ){
+		if(c== '-') b= -1;
+		c= getchar();
+	}
+	while(isdigit(c) ){
+		n= n* 10;
+		n+= c- 48;
+		c= getchar();
+	}
+	return n* b;
 }
- 
-void qSort(int a[], int l, int r){
-    int mid= a[(l+ r)>> 1];
-    int i= l, j= r;
-    do{
-        while(a[i] < mid){
-            i++;
-        }
-        while(a[j] > mid){
-            j--;
-        }
-        if(i<= j){
-            int tmp= a[i];
-            a[i]= a[j];
-            a[j]= tmp;
-            i++;
-            j--;
-        }
-    }while(i<= j);
-    if(l< j){
-        qSort(a, l, j);
-    }
-    if(r> i){
-        qSort(a, i, r);
-    }
+
+void qSort(ll a[], int l, int r){
+	int mid= a[(l+ r)>> 1];
+	int i= l, j= r;
+	do{
+		while(a[i] > mid){
+			i++;
+		}
+		while(a[j] < mid){
+			j--;
+		}
+		if(i<= j){
+			ll tmp= a[i];
+			a[i]= a[j];
+			a[j]= tmp;
+			i++;
+			j--;
+		}
+	}while(i<= j);
+	if(l< j){
+		qSort(a, l, j);
+	}
+	if(r> i){
+		qSort(a, i, r);
+	}
 }
- 
-const int N = 2e5;
-const int M = 4e5;
-int head[N + 5];
-int fa[N + 5];
-int val[N + 5];
-int nxt[2 * N + 5];
-int to[2 * N + 5];
-int n, m;
-int tmp;
- 
-void addEdge(int x, int y){
-    tmp++;
-    to[tmp] = y;
-    nxt[tmp] = head[x];
-    head[x] = tmp;
+
+const int N = 1e5;
+ll a[N + 5];
+ll pre[N + 5];
+ll suf[N + 5];
+int n;
+bool ans1, ans2, ans3;
+
+void process(){
+	n =  read();
+	ans1 = true;
+	For(i, 1, n){
+		a[i] = read();
+		if(a[i] < 0){
+			ans1 = false;
+			return;
+		}
+	}
+
+	qSort(a, 1, n);
+
+	For(i, 1, n){
+		pre[i] = pre[i - 1] + a[i];
+	}
+	Ford(i, n, 1){
+		suf[i] = suf[i + 1] + a[i];
+	}
+
+	// For(i, 1, n){
+	// 	cout<< suf[i] << endl;
+	// }
+
+	if(pre[n] % 2 == 1){
+		ans1 = false;
+		return;
+	}
+
+	ans2 = true;
+
+	int pos = n + 1;
+
+	For(i, 1, n){
+		ll tmp = (ll)i * (ll)(i - 1);
+		while(a[pos - 1] < i && pos - 1 > i){
+			pos--;
+		}
+		if(pos <= i){
+			pos = i + 1;
+		}
+		tmp += suf[pos] + (ll)i * (ll)(pos - i - 1);
+		if(pre[i] > tmp){
+			ans2 = false;
+			return;
+		}
+	}
+
+	ans3 = true;
+
+	if(n != 1){
+		For(i, 1, n){
+			if(a[i] == 0){
+				ans3 = false;
+				return;
+			}
+		}
+	}
+
+	if(pre[n] != 2 * (n - 1LL) ){
+		ans3 = false;
+		return;
+	}
+	
 }
- 
-void dfspre(int x){
-    for(int i = head[x];i != 0; i = nxt[i]){
-        int y = to[i];
-        if(y == fa[x]){
-            continue;
-        }
-        fa[y] = x;
-        dfspre(y);
-    }
-}
- 
+
 int main()
 {
-    n = read();
-    For(i, 2, n){
-        int u = read(), v = read();
-        addEdge(u, v);
-        addEdge(v, u);
-    }
-    For(i, 1, n){
-        val[i] = read();
-    }
-    std::shared_ptr<int>
- 
-    return 0;
+	ans1 = ans2 = ans3 = false;
+	process();
+
+	if(ans1){
+		printf("YES\n");
+	}else{
+		printf("NO\n");
+	}
+	if(ans2){
+		printf("YES\n");
+	}else{
+		printf("NO\n");
+	}
+	if(ans3){
+		printf("YES\n");
+	}else{
+		printf("NO\n");
+	}
+
+
+	return 0;
 }
- 
+
 /*
-7
-1 2
-1 3
-2 4
-2 5
-3 6
-3 7
-2
-1 2 3
-1 3 3
+3
+4 4 4
+28
+3 3 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0
 */

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++11 -o CMakeFiles/aaa.dir/main.cpp.o -c \"/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/main.cpp\"",
+  "file": "/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/main.cpp"
+}
+]

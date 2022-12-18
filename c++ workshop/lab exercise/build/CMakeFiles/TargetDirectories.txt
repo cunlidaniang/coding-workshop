@@ -1,0 +1,3 @@
+/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/build/CMakeFiles/edit_cache.dir
+/mnt/d/workshops/coding workshop/c++ workshop/lab exercise/build/CMakeFiles/aaa.dir

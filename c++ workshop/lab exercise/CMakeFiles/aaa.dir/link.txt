@@ -1,1 +1,1 @@
-/usr/bin/cc   -rdynamic CMakeFiles/aaa.dir/main.o  -o aaa 
+/usr/bin/c++    -rdynamic CMakeFiles/aaa.dir/main.o  -o aaa 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/workshops/coding workshop/c++ workshop/project 5/src/main.cpp
+head.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 5/src/head.hpp
+Matrix.hpp
+/mnt/d/workshops/coding workshop/c++ workshop/project 5/src/Matrix.hpp
+
+include/Matrix.hpp
+head.hpp
+include/head.hpp
+
+include/head.hpp
+iostream
+-
+memory
+-
+
